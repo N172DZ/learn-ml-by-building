@@ -78,7 +78,9 @@ website:
         contents:
           - text: "L11: K-Means Clustering"
             href: lectures/11-kmeans.qmd
-          - text: "L12-13: Coming Soon"
+          - text: "L12: PCA and Dimensionality Reduction"
+            href: lectures/12-pca.qmd
+          - text: "L13: Coming Soon"
             href: "#"
       
       - section: "Module 4: Let's See & Chat"

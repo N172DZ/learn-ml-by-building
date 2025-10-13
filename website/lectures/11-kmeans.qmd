@@ -34,4 +34,4 @@ By the end of this lecture, you will:
 
 ---
 
-**Previous**: [← Lecture 10: Kernel Methods & Gaussian Processes](10-kernel-gp.qmd) | **Next**: TBD
+**Previous**: [← Lecture 10: Kernel Methods & Gaussian Processes](10-kernel-gp.qmd) | **Next**: [Lecture 12: PCA and Dimensionality Reduction →](12-pca.qmd)

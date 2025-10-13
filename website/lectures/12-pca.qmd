@@ -1,0 +1,39 @@
+---
+title: "Lecture 12: Simplifying Data — PCA and Friends"
+subtitle: "Dimensionality Reduction for Visualization and Understanding"
+---
+
+## Overview
+
+High-dimensional data is everywhere in machine learning: text embeddings with hundreds of dimensions, images with thousands of pixels, genomic data with tens of thousands of features. But humans can only visualize 2D or 3D spaces. This lecture introduces dimensionality reduction (DR) techniques that compress high-dimensional data while preserving important relationships. We start with Principal Component Analysis (PCA), the foundational linear method that finds directions of maximum variance. Then we explore modern nonlinear techniques like t-SNE, UMAP, and PaCMAP that excel at revealing local clusters and patterns. Finally, we apply these methods to a real challenge: distinguishing AI-generated text from human writing using embeddings from the DAIGT dataset.
+
+## Learning Objectives
+
+By the end of this lecture, you will:
+
+- Explain PCA geometrically and understand how it finds directions of maximum variance for data compression
+- Recognize PCA's limitations and know when it works well (linear structure, global relationships) versus when it fails (nonlinear manifolds, local clusters)
+- Choose appropriate DR methods by selecting between PCA, t-SNE, UMAP, and PaCMAP based on whether you need local structure, global structure, or both
+- Interpret DR visualizations critically, understanding what relationships are preserved and what might be artifacts
+- Apply DR to real data using the full pipeline (embedding → PCA → nonlinear DR → clustering) on text data while avoiding common pitfalls like text length leakage
+- Optimize DR workflows by using PCA preprocessing to speed up nonlinear methods and choosing appropriate hyperparameters
+
+## Materials
+
+::: {.callout-tip}
+## Quick Access
+**[PCA and Dimensionality Reduction Notebook](https://github.com/jinming99/learn-ml-by-building/blob/main/Lecture%2012%20PCA/12-PCA.ipynb)**
+:::
+
+## Datasets & Acknowledgments
+
+- **DAIGT V3** (thedrcat, Kaggle): Detecting AI Generated Text dataset with 130k texts, used to demonstrate real-world DR applications for distinguishing AI vs. human writing
+- **Mammoth 3D** (PaCMAP repository): 10k-point digitization of mammoth skeleton for testing global structure preservation
+- **Synthetic datasets**: Circles, moons, and swiss roll for demonstrating nonlinear structure
+- **Libraries**: scikit-learn (PCA, t-SNE), UMAP-learn, PaCMAP, sentence-transformers (text embeddings)
+- **Inspiration**: Medium articles by Yang Lu on visualizing AI vs. human writing embeddings
+
+---
+
+**Previous**: [← Lecture 11: K-Means Clustering](11-kmeans.qmd) | **Next**: [Lecture 13: Neural Network Architecture →](13-nn-architecture.qmd)
+
