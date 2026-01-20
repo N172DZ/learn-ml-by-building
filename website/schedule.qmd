@@ -1,6 +1,6 @@
 ---
 title: "Course Schedule"
-subtitle: "Fall 2025"
+subtitle: ""
 ---
 
 ## Week-by-Week Schedule
@@ -12,7 +12,7 @@ The schedule below is embedded from Google Sheets and updates automatically.
 :::
 
 <iframe 
-  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQbIP8KGlIkCFWv5SEDa3dLss-nElLTMD6dlOj_UGH8UC5ypQuQMyubtuf3On_FjFvaCtIpXhX25M_B/pubhtml" 
+  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT_dtKYdTMFLn3wtvePBTOHUH8wIlnqLMasVvOAj9NkxWTO0oAXxBuQQl_uJtP9SPk3l6GBejY_TNEX/pubhtml?widget=true&amp;headers=false" 
   width="100%" 
   height="800" 
   frameborder="0"

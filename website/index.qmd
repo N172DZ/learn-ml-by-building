@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning: Learn by Building"
-subtitle: "ECE4424/CS4824 - Fall 2025"
+subtitle: ""
 ---
 
 ## Course Philosophy
@@ -23,16 +23,10 @@ Our practical, project-first ethos is inspired by the excellent work from [fast.
 ## Getting Started
 
 1. **Set up your environment** → [Setup Guide](lectures/00-setup.qmd)
-2. **Join Piazza** for discussions and announcements
-3. **Review the syllabus** → [Course Policies](syllabus.qmd)
-4. **Check the schedule** → [Week-by-Week](schedule.qmd)
+2. **Review the syllabus** → [Course Policies](syllabus.qmd)
+3. **Check the schedule** → [Week-by-Week](schedule.qmd)
 
 ## Course Team
 
 **Instructor**: Ming Jin  
 Email: jinming@vt.edu  
-
-| **Teaching Assistant** | Location       | Office Hours                    | Email              |
-|---|---|---|---|
-| Sherawat, Kamal    | Whittemore 256 | Tue/Thu 11:00 AM–12:00 Noon     | kamals@vt.edu      |
-| Nere, Darshan      | Whittemore 256 | Tue/Thu 3:00–4:00 PM            | darshannere@vt.edu |

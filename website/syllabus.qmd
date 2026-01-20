@@ -1,13 +1,13 @@
 ---
 title: "Course Syllabus"
-subtitle: "ECE4424/CS4824: Machine Learning - Fall 2025"
+subtitle: ""
 ---
 
 ## Official Syllabus
 
 For the most up-to-date and complete syllabus, please refer to the official Google Doc:
 
-- Syllabus (published): https://docs.google.com/document/d/e/2PACX-1vRawfzMzEKCan7nd1jOMbaCGrcMYo-DGU1XgfIBKJSRBiuF_Fj0E4KCeslTIGzRs5R60XAsYvURItxv/pub
+- Syllabus (published): https://docs.google.com/document/d/e/2PACX-1vRG8-sfrWXjflUf2qzuTQQi2auHgEuEUbStWhGfas4NdxL6CboMGeepmp9VrmutmupDX4Dr60S1Dlr7/pub
 
 Any updates will appear in the Google Doc.
 

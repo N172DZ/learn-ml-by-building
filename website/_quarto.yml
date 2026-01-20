@@ -7,8 +7,8 @@ project:
     - demos/p1-music/**
 
 website:
-  title: "ECE4424/CS4824: Machine Learning"
-  description: "Learn ML by Building - Fall 2025"
+  title: "Advanced Machine Learning"
+  description: "Learn ML by Building"
   site-url: https://jinming99.github.io/learn-ml-by-building/
   repo-url: https://github.com/jinming99/learn-ml-by-building
   repo-actions: []
@@ -34,8 +34,7 @@ website:
     right:
       - icon: github
         href: https://github.com/jinming99/learn-ml-by-building
-      - text: "Piazza"
-        href: https://piazza.com/class/melrw2iqdro2ar/
+
       - text: "Canvas"
         href: https://canvas.vt.edu/
   

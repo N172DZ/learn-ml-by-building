@@ -8,15 +8,6 @@ draft: true
 
 Each project is designed to deepen your understanding while building practical skills. You'll submit mini research papers that demonstrate both technical implementation and critical analysis.
 
-## Grading Distribution
-
-| Project | Weight | Due Date | Focus Area |
-|---------|--------|----------|------------|
-| [Project 1: Foundations](project1.qmd) | 15% | Feb 14 | Classical ML algorithms |
-| Project 2: Neural Networks | 15% | Mar 21 | Deep learning |
-| Project 3: Modern AI | 15% | Apr 4 | RL/Unsupervised/GenAI |
-| [Capstone Project](capstone.qmd) | 45% | Apr 25 | Self-directed research |
-
 ## Project Reports
 
 ### Format Requirements
