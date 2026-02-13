@@ -180,14 +180,75 @@ class KNNRecommender:
         results_df['distance'] = results_df['id'].map(distances_map)
         return results_df.sort_values('distance')
 
+def custom_hybrid_distance(track_a_data, track_b_data, audio_features_a, audio_features_b, w_artist=0.5):
+    """
+    Design your hybrid distance function here.
+    
+    Args:
+        track_a_data (pd.Series): Full data row for track A
+        track_b_data (pd.Series): Full data row for track B
+        audio_features_a (np.ndarray): Audio feature vector for track A
+        audio_features_b (np.ndarray): Audio feature vector for track B
+        w_artist (float): Weight for metadata component (0-1)
+        
+    Returns:
+        float: Combined distance value
+        
+    Ideas to consider:
+        - Audio similarity (using cosine or euclidean distance)
+        - Artist similarity (same artist = lower distance)
+        - You could also consider: genre, year, popularity, etc.
+    """
+    # DONE: Implement your hybrid distance
 
+    # D_hybrid = w1 * D_audio + w2 * D_artist_penalty
+    d_audio = KNNRecommender.euclidean_distance(audio_features_a, audio_features_b)
+    artist_penalty = 0.5 if track_a_data['artist'] == track_b_data['artist'] else 1.0
+    d_hybrid = (1-w_artist) * d_audio + w_artist * artist_penalty
+    return d_hybrid
 # Optional: If you implemented HybridKNNRecommender, add it here
 class HybridKNNRecommender(KNNRecommender):
-    """
-    OPTIONAL: If you completed the hybrid distance implementation, copy it here.
-    """
-    pass
-
+    
+    def find_neighbors(self, track_id, n_neighbors=None, distance_metric='hybrid', w_artist=0.5):
+        """
+        Find neighbors using hybrid distance that combines audio features and metadata.
+        
+        This method extends the base KNNRecommender to use the custom_hybrid_distance
+        function when distance_metric='hybrid'.
+        """
+        if distance_metric != 'hybrid':
+            return super().find_neighbors(track_id, n_neighbors, distance_metric)
+        
+        if n_neighbors is None: 
+            n_neighbors = self.k
+            
+        if track_id not in self.track_id_to_index: 
+            raise ValueError(f"Track ID {track_id} not found.")
+        
+        # --- YOUR IMPLEMENTATION GOES HERE ---
+        # DONE: Implement hybrid k-NN search
+        # 1. Get query track's features and metadata
+        # 2. For each other track:
+        #    - Calculate hybrid distance using custom_hybrid_distance
+        #    - Store (distance, track_id)
+        # 3. Sort and return top n_neighbors
+        query_index = self.track_id_to_index[track_id]
+        query_vector = self.features_matrix[query_index]
+        distances = []
+        for i in range(len(self.features_matrix)):
+            if i == query_index:
+                continue  # Skip the query track itself
+            dist = custom_hybrid_distance(
+                track_a_data=self.item_profile.iloc[query_index],
+                track_b_data=self.item_profile.iloc[i],
+                audio_features_a=query_vector,
+                audio_features_b=self.features_matrix[i],
+                w_artist=w_artist
+            )
+            distances.append((dist, self.item_profile['id'].iloc[i]))
+        distances.sort(key=lambda x: x[0])  # Sort by distance
+        return distances[:n_neighbors]
+        pass
 
 
 # ============================================================================
